@@ -35,14 +35,14 @@ const (
 	//PROJECT_ID = "around-xxx"
 	//BT_INSTANCE = "around-post"
 	// Needs to update this URL if you deploy it to cloud.
-	ES_URL      = "http://35.239.212.116:9200"
+	ES_URL      = "http://35.184.91.58:9200"
 	BUCKET_NAME = "post-images-282201"
 )
 
 func main() {
 
 	// Create a client
-	client, err := elastic.NewClient(elastic.SetURL(ES_URL), elastic.SetSniff(false), elastic.SetHealthcheck(false))
+	client, err := elastic.NewClient(elastic.SetURL(ES_URL), elastic.SetSniff(false))
 	if err != nil {
 		panic(err)
 		return
